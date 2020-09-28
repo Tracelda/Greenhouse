@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    public bool LockMovement;
     public float MoveSpeed;
     public Animator Animator;
 
@@ -31,7 +30,7 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!LockMovement)
+        if (!StaticScrpt.Lockmovement)
         {
             Movement();
             CharacterRotation();
