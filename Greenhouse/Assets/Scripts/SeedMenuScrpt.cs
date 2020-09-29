@@ -1,19 +1,37 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SeedMenuScrpt : MonoBehaviour
 {
     public Animator Animator;
-    // Start is called before the first frame update
-    void Start()
+    public bool MenuOpen;
+    public Text Text;
+
+    public void OpenClose()
     {
-        
+        if(!MenuOpen)
+        {
+            SetTrue();
+            Text.text = "<";
+            MenuOpen = true;
+        }
+        else
+        {
+            SetFalse();
+            Text.text = ">";
+            MenuOpen = false;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetTrue()
     {
-        
+        Animator.SetBool("MenuOpen", true);
+    }
+
+    public void SetFalse()
+    {
+        Animator.SetBool("MenuOpen", false);
     }
 }

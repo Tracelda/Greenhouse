@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class StaticScrpt
 {
-    private static bool lockmovement, raycastactive;
+    private static bool lockmovement, raycastactive, seedmenuactive;
 
     public static bool Lockmovement
     {
@@ -27,6 +27,18 @@ public static class StaticScrpt
         set
         {
             raycastactive = value;
+        }
+    }
+
+    public static bool SeedMenuActive
+    {
+        get
+        {
+            return seedmenuactive;
+        }
+        set
+        {
+            seedmenuactive = value;
         }
     }
 }
