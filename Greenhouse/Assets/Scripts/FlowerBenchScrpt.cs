@@ -32,6 +32,7 @@ public class FlowerBenchScrpt : MonoBehaviour
         BenchOpen = true;
         BenchCamera.SetActive(true);
         UiCanvas.GetComponent<Canvas>().worldCamera = BenchCamera.GetComponent<Camera>();
+        StaticScrpt.SeedMenuActive = true;
         MainCamera.SetActive(false);
     }
 
@@ -40,6 +41,7 @@ public class FlowerBenchScrpt : MonoBehaviour
         BenchOpen = false;
         MainCamera.SetActive(true);
         UiCanvas.GetComponent<Canvas>().worldCamera = MainCamera.GetComponent<Camera>();
+        StaticScrpt.SeedMenuActive = false;
         BenchCamera.SetActive(false);
         StaticScrpt.RaycastActive = true;
         StaticScrpt.Lockmovement = false;
